@@ -5,7 +5,7 @@ redis-mock
 
 ![Build status](https://github.com/yeahoffline/redis-mock/workflows/Build/badge.svg?branch=master)
 ![node-current](https://img.shields.io/node/v/redis-mock)
-![mock-completeness](https://img.shields.io/badge/Methods%20mocked-46%25%20(222%2F482)-red)
+![mock-completeness](https://img.shields.io/badge/Methods%20mocked-47%25%20(225%2F482)-red)
 [![GitHub issues](https://img.shields.io/github/issues/yeahoffline/redis-mock)](https://github.com/yeahoffline/redis-mock/issues)
 
 # FORKED
