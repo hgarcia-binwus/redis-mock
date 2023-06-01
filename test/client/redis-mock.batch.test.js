@@ -10,7 +10,7 @@ beforeEach(function () {
 });
 
 afterEach(function (done) {
-  r.flushall();
+  r.flushAll();
   r.quit(done);
 });
 

@@ -6,7 +6,7 @@ const redismock = require("../../lib");
 // Clean the db after each test
 afterEach(function (done) {
   var r = helpers.createClient();
-  r.flushdb(function () {
+  r.flushDb(function () {
     r.end(true);
     done();
   });
