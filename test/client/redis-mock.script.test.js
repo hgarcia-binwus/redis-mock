@@ -12,7 +12,7 @@ describe('Given the script command', () => {
   });
 
   afterEach((done) => {
-    redis.flushall(() => {
+    redis.flushAll(() => {
       done();
     });
   });

@@ -10,7 +10,7 @@ beforeEach(function () {
 });
 
 afterEach(function (done) {
-  r.flushall();
+  r.flushAll();
   r.quit(done);
 });
 
@@ -66,12 +66,12 @@ describe("select", function () {
   });
 });
 
-describe("flushdb", function () {
+describe("flushDb", function () {
 
   it("should clean the current database", function (done) {
 
     r.set("foo", "bar", function (err, result) {
-      r.flushdb(function (err, result) {
+      r.flushDb(function (err, result) {
         result.should.equal("OK");
 
         r.exists("foo", function (err, result) {
@@ -91,7 +91,7 @@ describe("flushdb", function () {
     r.select(0, function (err, result) {
       r.set("a", "1", function (err, result) {
         r.select(3, function (err, result) {
-          r.flushdb(function (err, result) {
+          r.flushDb(function (err, result) {
             r.select(0, function (err, result) {
               r.get("a", function (err, result) {
                 result.should.be.equal("1");

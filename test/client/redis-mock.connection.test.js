@@ -8,7 +8,7 @@ describe("select", () => {
   describe('When selecting the db through the select() call', () => {
 
     const r = helpers.createClient();
-    afterEach((done) => r.flushall(done));
+    afterEach((done) => r.flushAll(done));
     after((done) => r.quit(done));
 
     it('Then the previously specified keys should not be visible', (done) => {
@@ -99,7 +99,7 @@ describe("select", () => {
     });
 
     afterEach((done) => {
-      c1.flushall(() => c2.flushall(() => c1.quit(() => c2.quit(done))));
+      c1.flushAll(() => c2.flushAll(() => c1.quit(() => c2.quit(done))));
     });
 
     it('When 2 clients point to the same redis instance, but 2 different dbs, Then they do not see each other\'s keys', (done) => {
@@ -126,7 +126,7 @@ describe("select", () => {
     });
 
     afterEach((done) => {
-      subscriber.flushall(() => publisher.flushall(() => subscriber.quit(() => publisher.quit(done))));
+      subscriber.flushAll(() => publisher.flushAll(() => subscriber.quit(() => publisher.quit(done))));
     });
 
     it('When publishing, Then the subscribers on the same db are notified', (done) => {
